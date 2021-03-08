@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | WebAR_ChairVisualizer</title>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+		UnityLoader.SystemInfo.mobile = false;  // workaround to prevent the warning popup from opening on mobile phone
+
+		if (["Edge", "Firefox", "Chrome", "Safari"].indexOf(UnityLoader.SystemInfo.browser) == -1) {
+		UnityLoader.SystemInfo.browser = "Firefox"; // another workaround to prevent the warning popup from opening on unknown browsers
+		}	
+
+		UnityLoader.instantiate("unityContainer", "Build/WebAR_MRTK_HandInteraction_v0.1.json");
+    </script>
+  </head>
+  <body>
+    <div id="unityContainer" style="width: 1080px; height: 1920px; margin: auto"></div>
+  </body>
+</html>
